@@ -56,7 +56,13 @@ GameManager.prototype.setup = function () {
 
   // Update the actuator
   this.actuate();
+  this.ai();
 };
+
+GameManager.prototype.ai = function() {
+
+  console.log(this.score);
+}
 
 // Set up the initial tiles to start the game with
 GameManager.prototype.addStartTiles = function () {
@@ -118,6 +124,7 @@ GameManager.prototype.prepareTiles = function () {
     }
   });
 };
+
 
 // Move a tile and its representation
 GameManager.prototype.moveTile = function (tile, cell) {
